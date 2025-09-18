@@ -33,12 +33,12 @@ test("Testeo el save del modelo", (t) => {
 });
 
 test("Testeo el getOneById del modelo", (t) => {
-  const model = new ContactsCollection();
-  const mockContact = {
+  const model = new ContactsCollection(); // crea uns isntancia del modelo ContactsCollection
+  const mockContact = { // Crea un contacto de prueba 
     id: 31,
     name: "Marce",
   };
-  model.addOne(mockContact);
-  const one = model.getOneById(31);
-  t.deepEqual(one, mockContact);
+  model.addOne(mockContact); // lo agregamos a model  ese contacto se agrega a tu colección 
+  const one = model.getOneById(31); // Lo buscas por ID
+  t.deepEqual(one, mockContact); // para combrobar que el resultado sea indentico al que agregaste 
 });
